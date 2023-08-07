@@ -4,7 +4,7 @@ API Testing examples with testng, rest assured and Java.
 Suites are performing test steps for the following endpoints:
 
 Scenario:
-You work as Software Development in Test role in our API team built recently. As a team, you’ll start to develop an API that does 4 operations (addition, subtraction, multiplication and, division) and calculates the sum of numbers from 1 to n. The team will start to develop this task 2 weeks later, but you’re planning to develop test automation as of today. We expect you to create a test automation project for the following scenarios which you agreed with the team.
+You’ll start to develop an API that does 4 operations (addition, subtraction, multiplication and, division) and calculates the sum of numbers from 1 to n. The team will start to develop this task 2 weeks later, but you’re planning to develop test automation as of today. We expect you to create a test automation project for the following scenarios which you agreed with the team.
 
 API should only do GET and POST
 Must have a User Endpoint and use the received header after logging in
