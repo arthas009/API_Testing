@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Default Suite">
+    <listeners>
+        <listener class-name="org.testng.reporters.EmailableReporter"></listener>
+    </listeners>
+
+    <test thread-count="1" name="Test1">
+        <classes>
+            <class name="AddEndpointTest">
+                <methods>
+                </methods>
+            </class>
+            <class name="DivisionEndpointTest">
+                <methods>
+                </methods>
+            </class>
+            <class name="MultiplicationEndpointTest">
+                <methods>
+                </methods>
+            </class>
+            <class name="SubtractionEndpointTest">
+                <methods>
+                </methods>
+            </class>
+            <class name="SumEndpointTest">
+                <methods>
+                </methods>
+            </class>
+            <class name="InvalidRequestTypesTests">
+                <methods>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test1 -->
+</suite> <!-- Default Suite -->
