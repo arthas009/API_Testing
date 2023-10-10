@@ -10,7 +10,7 @@ import java.io.PrintStream;
 import java.util.List;
 import java.util.Properties;
 
-public class SshConnectionManager {
+public class SSHConnection {
 
     public static Session session;
     public static ChannelShell channel;

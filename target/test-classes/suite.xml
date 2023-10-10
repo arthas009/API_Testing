@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="RestFulBooker_API_Testing_Automation" >
+    <listeners>
+        <listener class-name='listeners.TestStatusListener'/>
+        <listener class-name='listeners.AnnotationTransformer'/>
+    </listeners>
+    <test name='AddEndpointTest'>
+        <classes>
+            <class name='NewAddEndpointTest'/>
+        </classes>
+    </test>
+</suite>

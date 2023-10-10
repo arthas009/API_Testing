@@ -16,7 +16,8 @@ import java.util.List;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 
-public class RequestHandler implements IApi {
+
+public class API implements IApi {
 
     RequestSpecification reqSpec;
     HttpOperation method;
@@ -31,7 +32,7 @@ public class RequestHandler implements IApi {
 
     public void initBase(String baseConst) {
         Helper getHelp = new Helper();
-        getHelp.set_path("src/main/resources/Constants.properties");
+        getHelp.set_path("src/test/resources/Constants.properties");
         try {
             RestAssured.baseURI = getHelp.loadProperties(baseConst);
         } catch (Exception e) {
@@ -82,7 +83,7 @@ public class RequestHandler implements IApi {
         return "invalid method set for API";
     }
 
-    public RequestHandler assertIt(String key, Object val, ValidatorOperation operation) {
+    public API assertIt(String key, Object val, ValidatorOperation operation) {
 
         switch (operation.toString()) {
             case "EQUALS":
@@ -126,7 +127,7 @@ public class RequestHandler implements IApi {
 
     public void assertIt(List<List<Object>> data) {
         for (List<Object> li : data) {
-            switch (((ValidatorOperation) li.get(2)).toString()) {
+            switch (li.get(2).toString()) {
                 case "EQUALS":
                     resp.then().body(((String) li.get(0)), equalTo((String) li.get(1)));
                     break;
@@ -141,7 +142,7 @@ public class RequestHandler implements IApi {
         }
     }
 
-    public RequestHandler assertIt(int code) {
+    public API assertIt(int code) {
 
         resp.then().statusCode(code);
 
@@ -188,7 +189,7 @@ public class RequestHandler implements IApi {
         return resp.getCookie(cookieName);
     }
 
-    public RequestHandler assertIt(int code, int optionalCode) {
+    public API assertIt(int code, int optionalCode) {
         resp.then().statusCode(anyOf(equalTo(code), equalTo(optionalCode)));
         return this;
     }

@@ -18,7 +18,7 @@ public final class DBConnection {
 
         try {
             Class.forName(driver).newInstance();
-            this.conn = (Connection) DriverManager.getConnection(url + dbName, userName, password);
+            this.conn = DriverManager.getConnection(url + dbName, userName, password);
             this.conn.setNetworkTimeout(Executors.newSingleThreadExecutor(), 60 * 60 * 1000);
         } catch (Exception sqle) {
             sqle.printStackTrace();
@@ -96,4 +96,4 @@ public final class DBConnection {
     }
 
 
-}}
+}

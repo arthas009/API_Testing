@@ -1,9 +1,9 @@
 package authentication;
 
 import actions.HttpOperation;
-import rest.RequestHandler;
+import rest.API;
 
-public class Auth extends RequestHandler {
+public class Auth extends API {
 
 
 
@@ -29,9 +29,8 @@ public class Auth extends RequestHandler {
      * */
     public String getLoginToken(String userName, String passWord) {
         createToken(userName, passWord);
-        String response = callIt();
         //System.out.println(response);
-        return response;
+        return callIt();
     }
 
 }
