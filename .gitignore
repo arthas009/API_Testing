@@ -1,0 +1,5 @@
+target/*
+.idea/*
+assets/*
+test-output/*
+ExtentReports/*
